@@ -8,23 +8,27 @@ export default class IndexController extends Controller {
     },
     {
       name: `Climb`,
-      valuePath: `Climb`
+      valuePath: `climb`
     },
     {
-      name: `Name`,
-      valuePath: `name`
+      name: `First Name`,
+      valuePath: `first_name`
+    },
+    {
+      name: `Last Name`,
+      valuePath: `last_name`
     },
     {
       name: `Grade`,
-      valuePath: `Grade`
+      valuePath: `grade`
     },
     {
       name: `Area`,
-      valuePath: `Area`
+      valuePath: `area`
     },
     {
       name: `Type`,
-      valuePath: `Type`
+      valuePath: `type`
     }
   ]
 }
