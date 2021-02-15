@@ -1,4 +1,6 @@
   <EmberTable as |t|>
-    <t.head @columns={{this.columns}} />
+    <t.head @columns={{this.columns}} 
+      @sorts={{this.sorts}}
+      @onUpdateSorts={{action (mut this.sorts)}}/>
     <t.body @rows={{@model}} />
   </EmberTable>
