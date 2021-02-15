@@ -17,7 +17,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "postinstall": "rm -rf node_modules/ember-table/addon/styles"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
@@ -45,6 +46,7 @@
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.0",
     "ember-source": "~3.20.2",
+    "ember-table": "^3.0.0",
     "ember-template-lint": "^2.9.1",
     "eslint": "^7.5.0",
     "eslint-plugin-ember": "^8.9.1",
