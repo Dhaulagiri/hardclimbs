@@ -1,34 +1,33 @@
 import Controller from '@ember/controller';
-
 export default class IndexController extends Controller {
   columns = [
     {
       name: `Date`,
-      valuePath: `date`
+      valuePath: `date`,
     },
     {
       name: `Climb`,
-      valuePath: `climb`
+      valuePath: `climb`,
     },
     {
       name: `First Name`,
-      valuePath: `first_name`
+      valuePath: `first_name`,
     },
     {
       name: `Last Name`,
-      valuePath: `last_name`
+      valuePath: `last_name`,
     },
     {
       name: `Grade`,
-      valuePath: `grade`
+      valuePath: `grade`,
     },
     {
       name: `Area`,
-      valuePath: `area`
+      valuePath: `area`,
     },
     {
       name: `Type`,
-      valuePath: `type`
-    }
-  ]
+      valuePath: `type`,
+    },
+  ];
 }
