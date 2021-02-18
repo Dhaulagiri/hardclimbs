@@ -1,0 +1,15 @@
+{{page-title concat "Ascent" " | " this.ascent.climb " by " this.ascent.first_name " " this.ascent.last_name}}
+
+<h2>{{this.ascent.first_name}} {{this.ascent.last_name}} climbed {{this.ascent.climb}} on or about {{this.ascent.date}}</h2>
+
+<h4>Here are some links to more information:</h4>
+
+<ul>
+  {{#each @model as |media|}}
+    <li>
+      <a href="{{media.url}}" target="_blank" rel="noopener noreferrer">
+        {{media.url}}
+      </a>
+    </li>
+  {{/each}}
+</ul>
