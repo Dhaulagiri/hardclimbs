@@ -4,6 +4,7 @@ export default class IndexController extends Controller {
     {
       name: `Date`,
       valuePath: `date`,
+      link: `true`,
     },
     {
       name: `Climb`,

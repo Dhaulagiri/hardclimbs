@@ -1,8 +1,29 @@
-  <EmberTable as |t|>
-    {{!-- template-lint-disable no-action  --}}
-    <t.head @columns={{this.columns}} 
-      @sorts={{this.sorts}}
-      @widthConstraint="eq-container"
-      @onUpdateSorts={{action (mut this.sorts)}}/>
-    <t.body @rows={{@model}} />
-  </EmberTable>
+<h3>
+  This site began in 2013 as an effort to catalogue hard climbs done around the world. <br />
+  The project stalled in 2019 and the site broke in 2021. <br />
+  What remains is this list that was compiled over the years. Enjoy. <br />
+  <a href="mailto:hardclimbsinfo@gmail.com">Get in touch</a>
+</h3>
+
+<EmberTable as |t|>
+  {{!-- template-lint-disable no-action  --}}
+  <t.head @columns={{this.columns}} 
+    @sorts={{this.sorts}}
+    @widthConstraint="eq-container"
+    @onUpdateSorts={{action (mut this.sorts)}}/>
+  <t.body @rows={{@model}} as |b|>
+    <b.row as |r|>
+      <r.cell as |cell column|>
+        {{#if (and column.link (gt r.rowValue.media_count 0))}} 
+          <LinkTo @route="ascents.ascent" @model={{r.rowValue.id}}>
+            {{cell}}
+          </LinkTo>
+        {{else}}
+          {{cell}}
+        {{/if}}
+        
+        
+      </r.cell>
+    </b.row>
+  </t.body>
+</EmberTable>
