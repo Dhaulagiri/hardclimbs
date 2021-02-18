@@ -1,1 +1,11 @@
-/* @import 'ember-table/default' */
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+/* @import "components.css"; */
+
+@import "tailwindcss/utilities";
+/* @import "utilities.css"; */
+
+.ember-table {
+  @apply table-auto;
+}
