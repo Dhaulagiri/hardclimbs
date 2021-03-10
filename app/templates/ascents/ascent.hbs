@@ -1,15 +1,52 @@
 {{page-title concat "Ascent" " | " this.ascent.climb " by " this.ascent.first_name " " this.ascent.last_name}}
 
-<h2>{{this.ascent.first_name}} {{this.ascent.last_name}} climbed {{this.ascent.climb}} on or about {{this.ascent.date}}</h2>
-
-<h4>Here are some links to more information:</h4>
-
-<ul class="list-disc list-inside">
-  {{#each @model as |media|}}
-    <li>
-      <a href="{{media.url}}" target="_blank" rel="noopener noreferrer">
-        {{media.url}}
-      </a>
-    </li>
-  {{/each}}
-</ul>
+<div class="bg-white shadow overflow-hidden sm:rounded-lg text-xl">
+  <div class="border-t border-gray-200">
+    <dl>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="font-medium text-gray-500">
+          Climber
+        </dt>
+        <dd class="mt-1 sm:mt-0 sm:col-span-2">
+          {{this.ascent.first_name}} {{this.ascent.last_name}}
+        </dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="font-medium text-gray-500">
+          Climb
+        </dt>
+        <dd class="mt-1 sm:mt-0 sm:col-span-2">
+          {{this.ascent.climb}}
+        </dd>
+      </div>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="font-medium text-gray-500">
+          Date (approximate)
+        </dt>
+        <dd class="mt-1 sm:mt-0 sm:col-span-2">
+         {{this.ascent.date}}
+        </dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="font-medium text-gray-500">
+          Links
+        </dt>
+        <dd class="mt-1 sm:mt-0 sm:col-span-2">
+          <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
+            {{#each @model as |media|}}
+              <li class="pl-3 pr-4 py-3 flex items-center justify-between">
+                <div class="w-0 flex-1 flex items-center">
+                  <span class="ml-2 flex-1 w-0 truncate">
+                    <a href="{{media.url}}" target="_blank" rel="noopener noreferrer">
+                      {{media.url}}
+                    </a>
+                  </span>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>

@@ -4,7 +4,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    fontFamily: {},
+    extend: {
+      colors: {
+        'h-gray': '#eeeeee',
+        'h-red': '#b6131a',
+        'h-black': '#333333',
+      },
+    },
   },
   variants: {
     extend: {},
