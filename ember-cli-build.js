@@ -6,6 +6,15 @@ const isProduction = EmberApp.env() === 'production';
 const purgeCSS = {
   module: require('@fullhuman/postcss-purgecss'),
   options: {
+    safelist: [
+      'table',
+      'et-sort-toggle',
+      'tbody',
+      'th',
+      'tr',
+      'ember-table',
+      'td',
+    ],
     content: [
       // add extra paths here for components/controllers which include tailwind classes
       './app/index.html',
