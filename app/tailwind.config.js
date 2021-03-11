@@ -4,7 +4,9 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {},
+    fontFamily: {
+      mono: ['ui-monospace', 'SFMono-Regular', 'Menlo'],
+    },
     extend: {
       colors: {
         'h-gray': '#eeeeee',

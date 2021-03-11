@@ -35,5 +35,5 @@ a {
 }
 
 body {
-  @apply bg-h-gray;
+  @apply bg-h-gray font-mono;
 }
