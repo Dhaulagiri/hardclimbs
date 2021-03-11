@@ -1,0 +1,43 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+/* @import "components.css"; */
+
+@import "tailwindcss/utilities";
+/* @import "utilities.css"; */
+
+.ember-table {
+  @apply table-auto min-w-full divide-y divide-gray-200;
+}
+
+table {
+  @apply min-w-full divide-y divide-gray-200 bg-white rounded-md;
+}
+
+th {
+  @apply px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider;
+}
+
+th:hover {
+  cursor: pointer;
+}
+
+tbody {
+  @apply divide-y divide-gray-200;
+}
+
+td {
+  @apply px-6 py-4;
+}
+
+.et-sort-toggle {
+  @apply hidden;
+}
+
+a {
+  @apply text-h-red hover:text-h-black;
+}
+
+body {
+  @apply bg-h-gray font-mono;
+}
