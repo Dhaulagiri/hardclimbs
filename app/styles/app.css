@@ -18,6 +18,10 @@ th {
   @apply px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider;
 }
 
+th:hover {
+  cursor: pointer;
+}
+
 tbody {
   @apply divide-y divide-gray-200;
 }
