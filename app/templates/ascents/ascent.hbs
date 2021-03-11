@@ -1,6 +1,6 @@
 {{page-title concat "Ascent" " | " this.ascent.climb " by " this.ascent.first_name " " this.ascent.last_name}}
 
-<div class="bg-white shadow overflow-hidden sm:rounded-lg text-xl">
+<div class="bg-white shadow overflow-hidden sm:rounded-lg text-lg">
   <div class="border-t border-gray-200">
     <dl>
       <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -34,14 +34,10 @@
         <dd class="mt-1 sm:mt-0 sm:col-span-2">
           <ul class="list-disc list-inside">
             {{#each @model as |media|}}
-              <li class="pl-3 pr-4 py-3 flex items-center justify-between">
-                <div class="w-0 flex-1 flex items-center">
-                  <span class="ml-2 flex-1 w-0 truncate">
-                    <a href="{{media.url}}" target="_blank" rel="noopener noreferrer">
-                      {{media.url}}
-                    </a>
-                  </span>
-                </div>
+              <li class="truncate">
+                <a href="{{media.url}}" target="_blank" rel="noopener noreferrer">
+                  {{media.url}}
+                </a>
               </li>
             {{/each}}
           </ul>
